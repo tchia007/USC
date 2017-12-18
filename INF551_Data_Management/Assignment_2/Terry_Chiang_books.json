@@ -1,0 +1,53 @@
+
+{
+  "items": {
+        "book": {
+        "publisher": "Addison-Wesley",
+        "author": [
+                " Serge Abiteboul ", {
+                        "first-name": "Rick",
+                        "last-name": "Hull"
+                },
+                {
+                        "age": "20",
+                        "text": " Victor Vianu "
+                }
+        ],
+        "title": " Foundations of Databases ",
+        "year": " 1995 ",
+        "price": " 38.8 "
+        },
+        "cd": {
+                "price": "55",
+                "publisher": " Freeman ",
+                "author": {
+                        "age": "30",
+                        "#text": "Mary Lee"
+                },
+        "title": "A wonderful world! ",
+        "year": " 1998 "
+        }
+    }
+}
+
+-----------------------------------------------------------------
+The entire thing would be an object. 
+Items would be the first key and the value would an object.  
+Within the object of items, would be a key value of "book" : object 
+The object of book contains "publisher" : "Addison-Wesley" 
+Another object of hte book is the value "author" : array  
+The first element of the array would be "Serge" : "Abiteboul"
+The next element would be an object where the keys are "frst-name" and "last_name" for Rick and Hull resectively. 
+Then there would be another object of the author array with "age" : "20" 
+and "text" : "Victor Vianu". That concludes the author array. 
+The following title, year, and price would be their own key : value pairs with their repsective values. "title" : "Foundations of Databases" etc...
+That concludes the book's object. 
+
+cd would be the next key value of items. the value of the cd would be an object. 
+Inside this object would be "publisher" : "Freeman". 
+The author would be a key and the value would be an array. Inside the array is an object with the key "age" and "text" with text being "Mary Lee" as the value. 
+This ends the array. 
+Then the title, year, and price attribute would become their own keys and their values would be filled in with their values such as "title" : "A wonderful world!" and so on. 
+This concludes the cd' object. 
+
+This concludes the items object. 

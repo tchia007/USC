@@ -1,0 +1,14 @@
+SID 
+ID
+position
+created at
+created meta
+updated at
+updated meta
+meta
+data extract date
+report preiod
+terminal
+arrival_departure
+domestic_international
+passenger count

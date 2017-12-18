@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <purpose>emergency contact</purpose>
+    <persons>
+        <firstName>David</firstName>
+        <lastName>Small</lastName>
+        <age>38</age>
+    </persons>
+    <persons>
+        <firstName>John</firstName>
+        <lastName>Smith</lastName>
+        <age>25</age>
+        <address>
+            <street>21 2nd Street</street>
+            <city>New York</city>
+            <state>NY</state>
+            <postalCode>10021</postalCode>
+        </address>
+        <phoneNumbers>
+            <type>home</type>
+            <number>212-555-1234</number>
+        </phoneNumbers>
+        <phoneNumbers>
+            <type>mobile</type>
+            <number>646-555-4567</number>
+        </phoneNumbers>
+    </persons>
+    
+--------------------------------------------------------------
+purpose would have its own tags and within those tags would be emergency contact
+each person's data would be within their own element. for example the person david small would look like the following
+the same applies for John Smith. he would get his own person element. 
+when we get to the address, we can simply make street, city, state, and postal code their own elements within the address element.
+when we get to phoneNumbers, we can do the same as with address. within the phoneNumbers element, we can add phoneNumber as its own element. 
+There would be 2 different phoneNumbers element. Within the phoneNumbers elements, they would have tags of type and number with their values respectively. 
+  

@@ -1,0 +1,19 @@
+mary,john,Amazon,iphone 6
+mary,david,Ebay,ms office 2013
+mary,john,Amazon,thinkpad t460s
+mary,david,Ebay,db2 v9
+bill,john,Amazon,iphone 6
+bill,john,Amazon,thinkpad t460s
+bill,david,Ebay,ms office 2010
+bill,david,Ebay,windows 10
+bill,jennifer,Bestbuy,ideapad s50
+mark,john,Amazon,iphone 5
+mark,david,Amazon,ms office 2010
+mark,david,Ebay,ms office 2013
+mark,john,Amazon,db2 v9
+mark,david,Ebay,information server
+steve,john,Bestbuy,iphone 6
+steve,david,Bestbuy,ms office 2013
+steve,john,Bestbuy,thinkpad t460s
+steve,david,Bestbuy,windows 10
+steve,john,Bestbuy,iphone 5

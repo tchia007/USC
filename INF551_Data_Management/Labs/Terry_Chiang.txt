@@ -1,0 +1,8 @@
+1. /CATALOG/CD[Country != "USA" ]
+2. /CATALOG/CD[ARTIST="Bob Dylan"]
+3. /CATALOG/CD[PRICE>8]
+4. /CATALOG/CD[COMPANY="Polydor"and PRICE<10]
+5. /CATALOG/CD[@rating<=3]
+6. /CATALOG/CD[LANGUAGE]
+7. /CATALOG/CD[contains(ARTIST, 'Rod')]
+8. /CATALOG/CD[COMPANY='Columbia']/ARTIST

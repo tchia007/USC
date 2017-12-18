@@ -1,0 +1,14 @@
+iphone 5,538.3,cell phone,apple
+iphone 6,600.8,cell phone,apple
+iphone 5s,400,cell phone,apple
+iphone 6 plus,700.53,cell phone,apple
+ms office 2010,300,software,microsoft
+ms office 2013,400,software,microsoft
+windows 10,300,software,microsoft
+thinkpad t450s,1200.3,laptop,lenovo
+thinkpad t460s,900,laptop,lenovo
+ideapad s50,500,laptop,lenovo
+thinkpad t460,800.5,laptop,lenovo
+db2 v9,43000,software,ibm
+information server,110000,software,ibm
+taobao,230000,software,alibaba

@@ -1,0 +1,5 @@
+ibm,125.2,us
+apple,101.3,us
+alibaba,72.78,china
+lenovo,6.52,china
+microsoft,50.71,us

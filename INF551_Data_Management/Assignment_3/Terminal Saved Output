@@ -1,0 +1,119 @@
+Last login: Sun Feb  5 22:05:17 on ttys001
+Terrys-MacBook-Pro:~ TerryChiang$ cd Downloads/
+Terrys-MacBook-Pro:Downloads TerryChiang$ ssh -i "inf551.pem" ec2-user@ec2-52-24-87-116.us-west-2.compute.amazonaws.com
+Last login: Mon Feb  6 06:05:13 2017 from cpe-104-32-163-214.socal.res.rr.com
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-ami/2016.09-release-notes/
+[ec2-user@ip-172-31-33-242 ~]$ cd inf553/HW1_INF553/
+[ec2-user@ip-172-31-33-242 HW1_INF553]$ ls
+hw1.pdf              TwoPhase.class  TwoPhase$PhaseOneMapperA.class  TwoPhase$PhaseTwoMapper.class
+output               TwoPhase.jar    TwoPhase$PhaseOneMapperB.class  TwoPhase$PhaseTwoReducer.class
+test_cases_examples  TwoPhase.java   TwoPhase$PhaseOneReducer.class  TwoPhase.py
+[ec2-user@ip-172-31-33-242 HW1_INF553]$ vim TwoPhase.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  1 from pyspark import SparkContext
+  2 from operator import add
+  3 import sys
+  4 
+  5 sc = SparkContext(appName="inf553")
+  6 
+  7 inputA = sys.argv[1]
+  8 inputB = sys.argv[2]
+  9 output = sys.argv[3]
+ 10 
+ 11 matA = sc.textFile(inputA)
+ 12 matB = sc.textFile(inputB)
+ 13 
+ 14 map1A = matA.map(lambda line : line.split(",")) \
+ 15             .map(lambda line : { "row" : line[0] , "column" : line[1], "value" : line[2]}) \
+ 16             .map(lambda line : (line["column"], ('A', line["row"], line["value"])).collect()
+ 17 for values in map1A:
+ 18     print values
+ 19 
+ 20 map1B = matB.map(lambda line: line.split(",")) \
+ 21             .map(lambda row, column, value : (row, ('B', column, value)))
+ 22 
+ 23 reducer1 = map1A.union(map1B) \
+ 24                 .groupByKey() \
+ 25                 .map(lambda x: (x[0], list(x[1]))).collect()
+ 26 
+ 27 for value in reducer1:
+ 28     print value
+ 29 
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+~                                                                                                    
+-- INSERT --                                                                       18,17         All

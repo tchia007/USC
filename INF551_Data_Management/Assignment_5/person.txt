@@ -1,0 +1,7 @@
+mary,(323)138-8588,los angeles
+john,(626)123-4586,san gabriel
+david,(323)687-7022,los angeles
+bill,(323)183-3838,los angeles
+jennifer,(626)008-0006,alhambra
+steve,(323)121-3838,alhambra
+mark,(323)392-3838,los angeles

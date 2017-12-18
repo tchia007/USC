@@ -1,0 +1,22 @@
+#!/usr/bin/python
+
+import sys
+text_file = sys.argv[1]
+
+with open(text_file, 'r') as file:
+	head = file.readline().rstrip()
+	head = int(head)
+
+	sum = 0 #declaring some variables
+	smallest_diff = 0
+	difference = 0
+	temp_head = 0
+	temp = 0
+	track_begin = 0
+	track_end = 199
+
+	string = file.read() #reading second line
+	queue = map(int, string.split()) #changing string into an array of int 
+	queue.sort()
+	highest_val = max(queue)
+	lowest_val = min(queue)
