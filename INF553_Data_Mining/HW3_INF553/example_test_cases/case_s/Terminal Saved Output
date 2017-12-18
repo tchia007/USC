@@ -1,0 +1,3002 @@
+Last login: Mon Mar 20 20:00:42 on ttys000
+Terrys-MacBook-Pro:~ TerryChiang$ cd Desktop/
+Terrys-MacBook-Pro:Desktop TerryChiang$ sudo /usr/local/google_appengine/appcfg.py -A helloworld-162201 update helloworld/
+Password:
+08:12 PM Application: helloworld-162201 (was: helloworld); version: 1
+08:12 PM Host: appengine.google.com
+08:12 PM Starting update of app: helloworld-162201, version: 1
+08:12 PM Getting current resource limits.
+08:13 PM Scanning files on local disk.
+Error 404: --- begin server output ---
+This application does not exist (project_id=u'helloworld-162201'). To create an App Engine application in this project, run "gcloud app create" in your console.
+--- end server output ---
+Terrys-MacBook-Pro:Desktop TerryChiang$ cd 
+Terrys-MacBook-Pro:~ TerryChiang$ ls
+AndroidStudioProjects		Library				Sites
+Applications			Movies				iCloud Drive (Archive)
+Creative Cloud Files		Music				iCloud Drive (Archive) - 1
+Desktop				Pictures			npm-debug.log
+Documents			Public				wekafiles
+Downloads			RLifts-github_desktop
+Terrys-MacBook-Pro:~ TerryChiang$ pwd
+/Users/TerryChiang
+Terrys-MacBook-Pro:~ TerryChiang$ ls -l
+total 2456
+drwxr-xr-x   4 TerryChiang  staff      136 Oct 10  2015 AndroidStudioProjects
+drwx------   5 TerryChiang  staff      170 Mar 14 21:57 Applications
+drwxrwxr-x@  3 TerryChiang  staff      102 Mar  7 16:02 Creative Cloud Files
+drwx------@ 10 TerryChiang  staff      340 Mar 20 18:32 Desktop
+drwx------@  9 TerryChiang  staff      306 Mar 18 14:52 Documents
+drwxrwxrwx+ 18 TerryChiang  staff      612 Mar 20 18:28 Downloads
+drwx------@ 72 TerryChiang  staff     2448 Mar 14 21:58 Library
+drwx------+  6 TerryChiang  staff      204 Oct 13 12:19 Movies
+drwx------+  5 TerryChiang  staff      170 Aug 14  2015 Music
+drwx------+  8 TerryChiang  staff      272 Oct 23  2015 Pictures
+drwxr-xr-x+  6 TerryChiang  staff      204 Dec 10  2015 Public
+drwxr-xr-x  10 TerryChiang  staff      340 Nov  4  2015 RLifts-github_desktop
+drwxr-xr-x   5 TerryChiang  staff      170 Feb  7 13:43 Sites
+drwxr-xr-x   7 TerryChiang  staff      238 Jan 19 11:36 iCloud Drive (Archive)
+drwxr-xr-x   6 TerryChiang  staff      204 Mar 14 22:02 iCloud Drive (Archive) - 1
+-rw-r--r--   1 TerryChiang  staff  1253725 Feb 11 14:03 npm-debug.log
+drwxr-xr-x   8 TerryChiang  staff      272 Dec  3 15:09 wekafiles
+Terrys-MacBook-Pro:~ TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:~ TerryChiang$ ls -l .appcfg_cookies
+ls: .appcfg_cookies: No such file or directory
+Terrys-MacBook-Pro:~ TerryChiang$ cd Desktop/
+Terrys-MacBook-Pro:Desktop TerryChiang$ sudo /usr/local/google_appengine/appcfg.py -A helloworld-162201 update --no_cookies helloworld/
+08:17 PM Application: helloworld-162201 (was: helloworld); version: 1
+08:17 PM Host: appengine.google.com
+08:17 PM Starting update of app: helloworld-162201, version: 1
+08:17 PM Getting current resource limits.
+Your browser has been opened to visit:
+
+    https://accounts.google.com/o/oauth2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fappengine.admin+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&redirect_uri=http%3A%2F%2Flocalhost%3A8090%2F&response_type=code&client_id=550516889912.apps.googleusercontent.com&access_type=offline
+
+If your browser is on a different machine then exit and re-run this
+application with the command-line parameter 
+
+  --noauth_local_webserver
+
+Authentication successful.
+08:17 PM Scanning files on local disk.
+Error 404: --- begin server output ---
+This application does not exist (project_id=u'helloworld-162201'). To create an App Engine application in this project, run "gcloud app create" in your console.
+--- end server output ---
+Terrys-MacBook-Pro:Desktop TerryChiang$ sudo /usr/local/google_appengine/appcfg.py -A helloworld-162201 update helloworld/
+08:19 PM Application: helloworld-162201 (was: helloworld); version: 1
+08:19 PM Host: appengine.google.com
+08:19 PM Starting update of app: helloworld-162201, version: 1
+08:19 PM Getting current resource limits.
+08:19 PM Scanning files on local disk.
+Error 404: --- begin server output ---
+This application does not exist (project_id=u'helloworld-162201'). To create an App Engine application in this project, run "gcloud app create" in your console.
+--- end server output ---
+Terrys-MacBook-Pro:Desktop TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:Desktop TerryChiang$ cd INF553/HW4_INF553/
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py 
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 4, in <module>
+    matrixFile = sys.argv[1]
+IndexError: list index out of range
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py 
+.DS_Store           Terry_Chiang_uv.py  hw4.pdf             test_case/          
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 10, in <module>
+    matrix = file.open(matrixFile)
+AttributeError: type object 'file' has no attribute 'open'
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 19, in <module>
+    generateUV()
+  File "Terry_Chiang_uv.py", line 15, in generateUV
+    matrixU = np.ones(n, f)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/core/numeric.py", line 178, in ones
+    a = empty(shape, dtype, order)
+TypeError: an integer is required
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 10, in <module>
+    matrix = np.fromfile(matrixFile, dtype=string)
+NameError: name 'string' is not defined
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 19, in <module>
+    generateUV()
+  File "Terry_Chiang_uv.py", line 15, in generateUV
+    matrixU = np.ones(n, f)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/core/numeric.py", line 178, in ones
+    a = empty(shape, dtype, order)
+TypeError: an integer is required
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 19, in <module>
+    generateUV()
+  File "Terry_Chiang_uv.py", line 15, in generateUV
+    matrixU = np.ones(n, f)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/core/numeric.py", line 178, in ones
+    a = empty(shape, dtype, order)
+TypeError: an integer is required
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 19, in <module>
+    generateUV()
+  File "Terry_Chiang_uv.py", line 15, in generateUV
+    matrixU = np.ones(n, f)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/core/numeric.py", line 178, in ones
+    a = empty(shape, dtype, order)
+TypeError: an integer is required
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 19, in <module>
+    generateUV()
+  File "Terry_Chiang_uv.py", line 15, in generateUV
+    matrixU = np.ones(n, f)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/core/numeric.py", line 178, in ones
+    a = empty(shape, dtype, order)
+TypeError: data type not understood
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[ 1.  1.]
+ [ 1.  1.]
+ [ 1.  1.]
+ [ 1.  1.]
+ [ 1.  1.]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[1 1]
+ [1 1]
+ [1 1]
+ [1 1]
+ [1 1]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 17, in <module>
+    matrix[row, col] = temp[2]
+IndexError: index 5 is out of bounds for axis 1 with size 5
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 19, in <module>
+    matrix[row, col] = temp[2]
+IndexError: index 5 is out of bounds for axis 1 with size 5
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+1,1,5
+
+1,2,2
+
+1,3,4
+
+1,4,4
+
+1,5,3
+
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 18, in <module>
+    matrix[row, col] = temp[2]
+IndexError: index 5 is out of bounds for axis 1 with size 5
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+1,1,5
+
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+1,2,2
+
+[[0 0 0 0 0]
+ [0 5 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+1,3,4
+
+[[0 0 0 0 0]
+ [0 5 2 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+1,4,4
+
+[[0 0 0 0 0]
+ [0 5 2 4 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+1,5,3
+
+[[0 0 0 0 0]
+ [0 5 2 4 4]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 19, in <module>
+    matrix[row, col] = temp[2]
+IndexError: index 5 is out of bounds for axis 1 with size 5
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+1,1,5
+
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 17, in <module>
+    row = temp[0] - 1 
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+1,1,5
+
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+1,2,2
+
+[[5 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+1,3,4
+
+[[5 2 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+1,4,4
+
+[[5 2 4 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+1,5,3
+
+[[5 2 4 4 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+2,1,3
+
+[[5 2 4 4 3]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+2,2,1
+
+[[5 2 4 4 3]
+ [3 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+2,3,2
+
+[[5 2 4 4 3]
+ [3 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+2,4,4
+
+[[5 2 4 4 3]
+ [3 1 2 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+2,5,1
+
+[[5 2 4 4 3]
+ [3 1 2 4 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+3,1,2
+
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+3,3,3
+
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+3,4,1
+
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+3,5,4
+
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+4,1,2
+
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+4,2,5
+
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 0 0 0 0]
+ [0 0 0 0 0]]
+4,3,4
+
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 0 0 0]
+ [0 0 0 0 0]]
+4,4,3
+
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 0 0]
+ [0 0 0 0 0]]
+4,5,5
+
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 0]
+ [0 0 0 0 0]]
+5,1,4
+
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [0 0 0 0 0]]
+5,2,3
+
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [4 0 0 0 0]]
+5,3,5
+
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [4 3 0 0 0]]
+5,4,4
+
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [4 3 5 0 0]]
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [4 3 5 4 0]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [4 3 5 4 0]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+  File "Terry_Chiang_uv.py", line 29
+    
+    ^
+IndentationError: expected an indented block
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [4 3 5 4 0]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 21, in <module>
+    print matrixU
+NameError: name 'matrixU' is not defined
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[1 1]
+ [1 1]
+ [1 1]
+ [1 1]
+ [1 1]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[1 1 1 1 1]
+ [1 1 1 1 1]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+  File "Terry_Chiang_uv.py", line 29
+    
+    ^
+IndentationError: expected an indented block
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[2 2 2 2 2]
+ [2 2 2 2 2]
+ [2 2 2 2 2]
+ [2 2 2 2 2]
+ [2 2 2 2 2]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+  File "Terry_Chiang_uv.py", line 23
+    matMprime np.dot(matU, matV)
+               ^
+SyntaxError: invalid syntax
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[ 3  0  2  2  1]
+ [ 1 -1  0  2 -1]
+ [ 0 -2  1 -1  2]
+ [ 0  3  2  1  3]
+ [ 2  1  3  2 -2]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 30, in <module>
+    totSquaredErr = totSquaredErr + items ** (2)
+NameError: name 'totSquaredErr' is not defined
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+80
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+0
+18
+25
+35
+58
+80
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[ 3  0  2  2  1]
+ [ 1 -1  0  2 -1]
+ [ 0 -2  1 -1  2]
+ [ 0  3  2  1  3]
+ [ 2  1  3  2 -2]]
+0
+18
+25
+35
+58
+80
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[         3          0          2          2          1]
+ [         1         -1          0          2         -1]
+ [         0 4486942870          1         -1          2]
+ [         0          3          2          1          3]
+ [         2          1          3          2 4479466430]]
+0
+18
+25
+1685912244934285315
+1685912244934285338
+3304787668721678640
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 11, in <module>
+    matrix = np.NAN((n,m), dtype=np.int)
+TypeError: 'float' object is not callable
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[                  3                   0                   2
+                    2                   1]
+ [                  1                  -1                   0
+                    2                  -1]
+ [                  0 9223372036854775806                   1
+                   -1                   2]
+ [                  0                   3                   2
+                    1                   3]
+ [                  2                   1                   3
+                    2 9223372036854775806]]
+0
+18
+25
+35
+58
+80
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[ 3  0  2  2  1]
+ [ 1 -1  0  2 -1]
+ [ 0 -2  1 -1  2]
+ [ 0  3  2  1  3]
+ [ 2  1  3  2 -2]]
+0
+18
+25
+35
+58
+80
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 21, in <module>
+    matrix[matrix == 0] = np.nan
+ValueError: cannot convert float NaN to integer
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]]
+0
+18
+25
+35
+58
+80
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]]
+[[                   5                    2                    4
+                     4                    3]
+ [                   3                    1                    2
+                     4                    1]
+ [                   2 -9223372036854775808                    3
+                     1                    4]
+ [                   2                    5                    4
+                     3                    5]
+ [                   4                    3                    5
+                     4 -9223372036854775808]]
+0
+18
+25
+35
+58
+80
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[                   5                    2                    4
+                     4                    3]
+ [                   3                    1                    2
+                     4                    1]
+ [                   2 -9223372036854775808                    3
+                     1                    4]
+ [                   2                    5                    4
+                     3                    5]
+ [                   4                    3                    5
+                     4 -9223372036854775808]]
+0
+18
+25
+35
+58
+80
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[              5               2               4               4
+                3]
+ [              3               1               2               4
+                1]
+ [              2 140222885051888               3               1
+                4]
+ [              2               5               4               3
+                5]
+ [              4               3               5               4
+  140222885051888]]
+Terry_Chiang_uv.py:36: RuntimeWarning: overflow encountered in long_scalars
+  totSquaredErr = totSquaredErr + items ** (2)
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [4 3 5 4 0]]
+[[ 3  0  2  2  1]
+ [ 1 -1  0  2 -1]
+ [ 0 -2  1 -1  2]
+ [ 0  3  2  1  3]
+ [ 2  1  3  2 -2]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [4 3 5 4 0]]
+[[ 3  0  2  2  1]
+ [ 1 -1  0  2 -1]
+ [ 0 -2  1 -1  2]
+ [ 0  3  2  1  3]
+ [ 2  1  3  2 -2]]
+(array([2, 4]), array([1, 4]))
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [4 3 5 4 0]]
+[[ 3  0  2  2  1]
+ [ 1 -1  0  2 -1]
+ [ 0 -2  1 -1  2]
+ [ 0  3  2  1  3]
+ [ 2  1  3  2 -2]]
+[2 4]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [4 3 5 4 0]]
+[[ 3  0  2  2  1]
+ [ 1 -1  0  2 -1]
+ [ 0 -2  1 -1  2]
+ [ 0  3  2  1  3]
+ [ 2  1  3  2 -2]]
+(array([2, 4]), array([1, 4]))
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [4 3 5 4 0]]
+[[ 3  0  2  2  1]
+ [ 1 -1  0  2 -1]
+ [ 0 -2  1 -1  2]
+ [ 0  3  2  1  3]
+ [ 2  1  3  2 -2]]
+[2 4]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [4 3 5 4 0]]
+[[ 3  0  2  2  1]
+ [ 1 -1  0  2 -1]
+ [ 0 -2  1 -1  2]
+ [ 0  3  2  1  3]
+ [ 2  1  3  2 -2]]
+[2 4]
+[1 4]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [4 3 5 4 0]]
+[[ 3  0  2  2  1]
+ [ 1 -1  0  2 -1]
+ [ 0 -2  1 -1  2]
+ [ 0  3  2  1  3]
+ [ 2  1  3  2 -2]]
+[[ 3  0  2  2  1]
+ [ 1 -1  0  2 -1]
+ [ 0  0  1 -1  2]
+ [ 0  3  2  1  3]
+ [ 2  1  3  2  0]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [4 3 5 4 0]]
+[[ 3  0  2  2  1]
+ [ 1 -1  0  2 -1]
+ [ 0 -2  1 -1  2]
+ [ 0  3  2  1  3]
+ [ 2  1  3  2 -2]]
+72
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+23
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+1.73205080757
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+1.76930347386
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ ls
+Terry_Chiang_uv.py	hw4.pdf			test_case
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 41, in <module>
+    matU[0][0] = x
+NameError: name 'x' is not defined
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 41, in <module>
+    matU[0][0] = 'x'
+ValueError: invalid literal for long() with base 10: 'x'
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 21, in <module>
+    matU = np.ones((n, f), dtype=np.string)	#U is of size n x f filled with 1's
+AttributeError: 'module' object has no attribute 'string'
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 41, in <module>
+    matU[0][0] = 'x'
+ValueError: could not convert string to float: x
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 41, in <module>
+    matU[0][0] = np.nan
+ValueError: cannot convert float NaN to integer
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 41, in <module>
+    x = np.linalg.solve(matU, 0)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/linalg/linalg.py", line 355, in solve
+    _assertNdSquareness(a)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/linalg/linalg.py", line 212, in _assertNdSquareness
+    raise LinAlgError('Last 2 dimensions of the array must be square')
+numpy.linalg.linalg.LinAlgError: Last 2 dimensions of the array must be square
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 41, in <module>
+    x = np.linalg.solve(matU, 0)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/linalg/linalg.py", line 355, in solve
+    _assertNdSquareness(a)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/linalg/linalg.py", line 212, in _assertNdSquareness
+    raise LinAlgError('Last 2 dimensions of the array must be square')
+numpy.linalg.linalg.LinAlgError: Last 2 dimensions of the array must be square
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 41, in <module>
+    x = np.linalg.solve(matU, matV)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/linalg/linalg.py", line 355, in solve
+    _assertNdSquareness(a)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/linalg/linalg.py", line 212, in _assertNdSquareness
+    raise LinAlgError('Last 2 dimensions of the array must be square')
+numpy.linalg.linalg.LinAlgError: Last 2 dimensions of the array must be square
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 43, in <module>
+    x = np.linalg.solve(matU, zeroArr)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/linalg/linalg.py", line 355, in solve
+    _assertNdSquareness(a)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/linalg/linalg.py", line 212, in _assertNdSquareness
+    raise LinAlgError('Last 2 dimensions of the array must be square')
+numpy.linalg.linalg.LinAlgError: Last 2 dimensions of the array must be square
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 43, in <module>
+    x = np.linalg.solve(matU[0], zeroArr)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/linalg/linalg.py", line 354, in solve
+    _assertRankAtLeast2(a)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/linalg/linalg.py", line 202, in _assertRankAtLeast2
+    'at least two-dimensional' % len(a.shape))
+numpy.linalg.linalg.LinAlgError: 1-dimensional array given. Array must be at least two-dimensional
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [4 3 5 4 0]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 43, in <module>
+    x = np.linalg.solve(matU, zeroArr)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/linalg/linalg.py", line 355, in solve
+    _assertNdSquareness(a)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/linalg/linalg.py", line 212, in _assertNdSquareness
+    raise LinAlgError('Last 2 dimensions of the array must be square')
+numpy.linalg.linalg.LinAlgError: Last 2 dimensions of the array must be square
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]]
+[[                   5                    2                    4
+                     4                    3]
+ [                   3                    1                    2
+                     4                    1]
+ [                   2 -9223372036854775808                    3
+                     1                    4]
+ [                   2                    5                    4
+                     3                    5]
+ [                   4                    3                    5
+                     4 -9223372036854775808]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]]
+[[                   5                    2                    4
+                     4                    3]
+ [                   3                    1                    2
+                     4                    1]
+ [                   2 -9223372036854775808                    3
+                     1                    4]
+ [                   2                    5                    4
+                     3                    5]
+ [                   4                    3                    5
+                     4 -9223372036854775808]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]]
+[[                   5                    2                    4
+                     4                    3]
+ [                   3                    1                    2
+                     4                    1]
+ [                   2 -9223372036854775808                    3
+                     1                    4]
+ [                   2                    5                    4
+                     3                    5]
+ [                   4                    3                    5
+                     4 -9223372036854775808]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]
+ [-9223372036854775808 -9223372036854775808 -9223372036854775808
+  -9223372036854775808 -9223372036854775808]]
+[[                   5                    2                    4
+                     4                    3]
+ [                   3                    1                    2
+                     4                    1]
+ [                   2 -9223372036854775808                    3
+                     1                    4]
+ [                   2                    5                    4
+                     3                    5]
+ [                   4                    3                    5
+                     4 -9223372036854775808]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[                   5                    2                    4
+                     4                    3]
+ [                   3                    1                    2
+                     4                    1]
+ [                   2 -9223372036854775808                    3
+                     1                    4]
+ [                   2                    5                    4
+                     3                    5]
+ [                   4                    3                    5
+                     4 -9223372036854775808]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [4 3 5 4 0]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+hbi
+hbi
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [4 3 5 4 0]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 20, in <module>
+    for i in range(0, len(n)):
+TypeError: object of type 'int' has no len()
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 23, in <module>
+    matrix[i][j] = none 
+NameError: name 'none' is not defined
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 23, in <module>
+    matrix[i][j] = null
+NameError: name 'null' is not defined
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 23, in <module>
+    matrix[i][j] = None 
+TypeError: long() argument must be a string or a number, not 'NoneType'
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 23, in <module>
+    matrix[i][j] = 'a'
+ValueError: invalid literal for long() with base 10: 'a'
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 23, in <module>
+    matrix[i][j] = 'a'
+ValueError: invalid literal for long() with base 10: 'a'
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 23, in <module>
+    matrix[i][j] = 'a'
+ValueError: could not convert string to float: a
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[  5.00000000e+000   2.00000000e+000   4.00000000e+000   4.00000000e+000
+    3.00000000e+000]
+ [  3.00000000e+000   1.00000000e+000   2.00000000e+000   4.00000000e+000
+    1.00000000e+000]
+ [  2.00000000e+000   2.20167675e-314   3.00000000e+000   1.00000000e+000
+    4.00000000e+000]
+ [  2.00000000e+000   5.00000000e+000   4.00000000e+000   3.00000000e+000
+    5.00000000e+000]
+ [  4.00000000e+000   3.00000000e+000   5.00000000e+000   4.00000000e+000
+    2.20005157e-314]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [4 3 5 4 0]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+  File "Terry_Chiang_uv.py", line 50
+    
+    ^
+IndentationError: expected an indented block
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+[[5 2 4 4 3]
+ [3 1 2 4 1]
+ [2 0 3 1 4]
+ [2 5 4 3 5]
+ [4 3 5 4 0]]
+[[ 3  0  2  2  1]
+ [ 1 -1  0  2 -1]
+ [ 0 -2  1 -1  2]
+ [ 0  3  2  1  3]
+ [ 2  1  3  2 -2]]
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+25
+26
+27
+28
+29
+0
+30
+31
+32
+33
+34
+0
+35
+36
+37
+38
+39
+0
+40
+41
+42
+43
+44
+0
+45
+46
+47
+48
+49
+0
+50
+51
+52
+53
+54
+0
+55
+56
+57
+58
+59
+0
+60
+61
+62
+63
+64
+0
+65
+66
+67
+68
+69
+0
+70
+71
+72
+73
+74
+0
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 50, in <module>
+    numerator = numerator + (matV[s][j] * innerCalc)
+NameError: name 'numerator' is not defined
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 50, in <module>
+    numerator = numerator + (matV[s][j] * innerCalc)
+NameError: name 'numerator' is not defined
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Traceback (most recent call last):
+  File "Terry_Chiang_uv.py", line 50, in <module>
+    numerator = numerator + (matV[s][j] * innerCalc)
+NameError: name 'numerator' is not defined
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+4.0
+1.0
+3.0
+3.0
+2.0
+2.0
+0.0
+1.0
+3.0
+0.0
+1.0
+-1.0
+2.0
+0.0
+3.0
+1.0
+4.0
+3.0
+2.0
+4.0
+3.0
+2.0
+4.0
+3.0
+-1.0
+4.0
+1.0
+3.0
+3.0
+2.0
+2.0
+0.0
+1.0
+3.0
+0.0
+1.0
+-1.0
+2.0
+0.0
+3.0
+1.0
+4.0
+3.0
+2.0
+4.0
+3.0
+2.0
+4.0
+3.0
+-1.0
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+3.0
+-1.0
+0.0
+-1.0
+-3.0
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+3.0
+-1.0
+0.0
+-1.0
+-3.0
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Sum: 2
+3.0
+Sum: 3
+-1.0
+Sum: 4
+0.0
+Sum: 5
+-1.0
+Sum: 6
+-3.0
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Sum: 2
+5.0
+Sum: 1
+2.0
+Sum: 1
+4.0
+Sum: 1
+4.0
+Sum: 1
+3.0
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Sum: 2
+5.0
+Sum: 1
+2.0
+Sum: 1
+4.0
+Sum: 1
+4.0
+Sum: 1
+3.0
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Sum: 2
+Sum: 1
+Sum: 1
+Sum: 1
+Sum: 1
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Sum: 1
+Sum: 1
+Sum: 1
+Sum: 1
+Sum: 1
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ python Terry_Chiang_uv.py test_case/mat.dat 5 5 2 10
+Sum: 2
+Sum: 3
+Sum: 4
+Sum: 5
+Sum: 6
+Terrys-MacBook-Pro:HW4_INF553 TerryChiang$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
