@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- angular scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="/javascript/HW8.js" type="text/JavaScript"></script> 
+    <link rel="stylesheet" type="text/css" href="/css/HW8.css">
+
+</head>
+<body ng-app="HW8" ng-controller="controller">
+<!--     <script> 
+        window.fbAsyncInit = function(){
+            FB.init({
+                app_id: '1828822820692317',
+                xfbml: true, 
+                version: 'v2.8', 
+            });
+        };
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src="https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        } (document, 'script', 'facebook-jssdk'));
+    </script> -->
+    <div class="row">
+        <div class="container-fluid" style="border-bottom: none">
+            <form class="form-inline" method ="get">
+                <div class="form-horizontal"> 
+                    <div class="col-xs-3">
+                        <label id='fbTitle'>FB Search</label>
+                     </div>
+                    <div class="col-xs-4">
+                        <input type="text" class="form-control" id ="kw" placeholder="type something...">
+                    </div>
+                    <div class="col-xs-4">
+                        <button id="glyphButton" value="kw" ng-click="userSearch()">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        <input type="reset" value = "Clear" id ='clearButton'>
+                     </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-default"> 
+        <div class="container-fluid">
+            <div>
+                <ul class="nav navbar-nav" id='operation'> 
+                    <li class="active" data-value="users"><a href ="#" onclick="showUsers();">Users</a></li>
+                    <li data-value="pages"><a href ="#" onclick="showPages();">Pages</a></li>
+                    <li data-value="events"><a href ="#" onclick="showEvents();">Events</a></li>
+                    <li data-value="places"><a href ="#" onclick="showPlaces();">Places</a></li>
+                    <li data-value="groups"><a href ="#" onclick="showGroups();">Groups</a></li>
+                    <li data-value="favorites"><a href ="#" onclick="showFavs();">Favorites</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div ng-show="loading" class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+        <span class="sr-only">45% Complete</span>
+        </div>
+    </div>
+
+    <div class="user" ng-leave>
+        <table ng-table="userTable" class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Profile Photo</th>
+                    <th>Name</th>
+                    <th>Favorite</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="data in userDetails">
+                <tr>
+                    <td style="vertical-align:middle; font-weight: bold">{{ $index + 1 }}</td>
+                    <td><a ng-href= "{{ data.picture.data.url}}" target="_blank"><img class="profilePic" ng-src="{{ data.picture.data.url}}" height='40' width='30'></a></td>
+                    <td style="vertical-align:middle">{{ data.name }}</td>
+                    <td><button class="but_det" ng-click="changeStar($index + 1, data.name, data.picture.data.url, 'users', data.id)"><span id="{{data.id }}" class="glyphicon glyphicon-star-empty"></span></button></td>
+                    <td><button ng-click="detailsSearch(data.id, data.picture.data.url, data.name, 'users')" class="but_det"><span class="glyphicon glyphicon-chevron-right"></span></button></td> 
+                </tr>
+             </tbody>
+        </table>
+    </div>
+
+    <div class="lowerButtonsUsers">
+        <button ng-click = "loadPrevUsers()" id = "previousUsers" class = "btn btn-md">Previous</button>
+        <button ng-click = "loadNextUsers()" id = "nextUsers" class = "btn btn-md">Next</button>
+    </div>
+
+    <div class="pages">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Profile Photo</th>
+                    <th>Name</th>
+                    <th>Favorite</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="data in pagesDetails">
+                    <td style="vertical-align:middle; font-weight: bold">{{ $index + 1 }}</td>
+                    <td><a ng-href= "{{ data.picture.data.url}}" target="_blank"><img class="profilePic" ng-src="{{ data.picture.data.url}}" height='40' width='30'></a></td>
+                    <td style="vertical-align:middle">{{ data.name }}</td>
+                    <td><button class="but_det" ng-click="changeStar($index + 1, data.name, data.picture.data.url, 'pages', data.id)"><span id="{{data.id}}" class="glyphicon glyphicon-star-empty"></span></button></td> 
+                    <td><button ng-click="detailsSearch(data.id,data.picture.data.url,data.name, 'pages')" class="but_det"><span class="glyphicon glyphicon-chevron-right"></span></button></td> 
+                </tr>
+             </tbody>
+        </table>
+    </div>
+
+    <div class="lowerButtonsPages">
+        <button ng-click = "loadPrevPages()" id = "previousPages" class = "btn btn-md">Previous</button>
+        <button ng-click = "loadNextPages()" id = "nextPages" class = "btn btn-md">Next</button>
+    </div>
+
+
+    <div class="events">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Profile Photo</th>
+                    <th>Name</th>
+                    <th>Favorite</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="data in eventsDetails">
+                    <td style="vertical-align:middle; font-weight: bold">{{ $index + 1 }}</td>
+                    <td><a ng-href= "{{ data.picture.data.url}}" target="_blank"><img class="profilePic" ng-src="{{ data.picture.data.url}}" height='40' width='30'></a></td>
+                    <td style="vertical-align:middle">{{ data.name }}</td>
+                    <td><button class="but_det" ng-click="changeStar($index + 1, data.name, data.picture.data.url, 'events', data.id)"><span id="{{ data.id }}" class="glyphicon glyphicon-star-empty"></span></button></td> 
+                    <td><button ng-click="detailsSearch(data.id,data.picture.data.url,data.name, 'events')" class="but_det"><span class="glyphicon glyphicon-chevron-right"></span></button></td> 
+                </tr>
+             </tbody>
+        </table>
+    </div>
+
+    <div class="lowerButtonsEvents">
+        <button ng-click = "loadPrevEvents()" id = "previousEvents" class = "btn btn-md">Previous</button>
+        <button ng-click = "loadNextEvents()" id = "nextEvents" class = "btn btn-md">Next</button>
+    </div>
+
+    <div class="places">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Profile Photo</th>
+                    <th>Name</th>
+                    <th>Favorite</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="data in placesDetails">
+                    <td style="vertical-align:middle; font-weight: bold">{{ $index + 1 }}</td>
+                    <td><a ng-href= "{{ data.picture.data.url}}" target="_blank"><img class="profilePic" ng-src="{{ data.picture.data.url}}" height='40' width='30'></a></td>
+                    <td style="vertical-align:middle">{{ data.name }}</td>
+                    <td><button class="but_det" ng-click="changeStar($index + 1, data.name, data.picture.data.url, 'places', data.id)"><span id="{{data.id }}" class="glyphicon glyphicon-star-empty"></span></button></td>
+                    <td><button ng-click="detailsSearch(data.id,data.picture.data.url,data.name, 'places')" class="but_det"><span class="glyphicon glyphicon-chevron-right"></span> </button></td>
+                </tr>
+             </tbody>
+        </table>
+    </div>
+
+    <div class="lowerButtonsPlaces">
+        <button ng-click = "loadPrevPlaces()" id = "previousPlaces" class = "btn btn-md">Previous</button>
+        <button ng-click = "loadNextPlaces()" id = "nextPlaces" class = "btn btn-md">Next</button>
+    </div>
+
+    <div class="groups">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Profile Photo</th>
+                    <th>Name</th>
+                    <th>Favorite</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="data in groupsDetails">
+                    <td style="vertical-align:middle; font-weight: bold">{{ $index + 1 }}</td>
+                    <td><a ng-href= "{{ data.picture.data.url }}" target="_blank"><img class="profilePic" ng-src="{{ data.picture.data.url}}" height='40' width='30'></a></td>
+                    <td style="vertical-align:middle">{{ data.name }}</td>
+                    <td><button class="but_det" ng-click="changeStar($index + 1, data.name, data.picture.data.url, 'groups', data.id)"><span id="{{data.id }}" class="glyphicon glyphicon-star-empty"></span></button></td>
+                    <td><button ng-click="detailsSearch(data.id,data.picture.data.url,data.name, 'groups')" class="but_det"><span class="glyphicon glyphicon-chevron-right"></span></button></td>
+                </tr>
+             </tbody>
+        </table>
+    </div>
+
+    <div class="lowerButtonsGroups">
+        <button ng-click = "loadPrevGroups()" id = "previousGroups" class = "btn btn-md">Previous</button>
+        <button ng-click = "loadNextGroups()" id = "nextGroups" class = "btn btn-md">Next</button>
+    </div>
+
+    <div class="favs">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Profile Photo</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Favorite</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="data in localSto">
+                    <td style="vertical-align:middle; font-weight: bold">{{ $index + 1 }}</td>
+                    <td><a ng-href="{{ data.url}}" target="_blank"><img class="profilePic" ng-src="{{ data.url }}" height ='40' width = '30'> </a></td>
+                    <td style="vertical-align:middle">{{ data.name }}</td>
+                    <td style="vertical-align:middle">{{ data.type }}</td>
+                    <td><button class="but_det" ng-click="removeFav(data.id, data.type)" ><span class="glyphicon glyphicon-trash"></span></button></td>
+                    <td><button class="but_det"><span class="glyphicon glyphicon-chevron-right"></span></button></td>
+                </tr> 
+            </tbody>
+        </table>
+    </div>
+
+    <div class="detailsPage">
+        <div>
+            <button id = "back" class="btn-group-lg" ng-click="goBack()"><span class="glyphicon glyphicon-chevron-left">Back</span></button>
+            <button class="fbRight" ng-click="fbPost()"><img src="http://cs-server.usc.edu:45678/hw/hw8/images/facebook.png" height="25" width ="25"></button>
+            <button class="fbRight" ng-click="changeDetailStar()"><span id = 'detailStar' class="glyphicon glyphicon-star-empty"></span></button>
+        </div>
+        <br>
+
+        <div id ="albums" class="panel panel-default">
+            <div class="well well-sm">Albums</div>
+
+             <div ng-show="loadingAlb" class="progress" id="loadingAlbums">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                    <span class="sr-only">45% Complete</span>
+                </div>
+            </div>
+
+            <div id ='detailsAlbumData' class="panel-body" ng-repeat="data in detailsAlbums">
+                <div class="well well-lg" ng-if="data.response!==undefined" style="color: #a38932; background-color:#fff4ce"> {{data.response}} </div>
+                <div class="panel-group">
+                    <div class="panel panel-default" ng-if="data.name!==undefined">
+                        <div class="panel-heading"><a ng-click="showDetsPics(data.id)">{{ data.name}}</a></div>
+                        <div class="panel-body" id='body{{data.id}}' style="display: none; visibility:hidden">
+                            <p ng-repeat="pics in data.picture" class="{{data.id}}" style="display: none; visibility:hidden" >
+                                <a href ="{{pics}}" target="_blank"><img src="{{pics}}" class="img-responsive"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <div id ="posts" class="panel panel-default">
+            <div class="well well-sm">Posts</div>
+
+            <div ng-show="loadingPo" class="progress" id = "loadingPosts">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                    <span class="sr-only">45% Complete</span>
+                </div>
+            </div>
+
+            <div id='detailsPostsData' class="panel-body" ng-repeat="data in detailsPosts">
+                <div class="well well-lg" ng-if="data.response!==undefined" style="color: #a38932; background-color:#fff4ce"> {{data.response}} </div>
+                <div ng-if="data.message!==undefined" class="panel panel-default"> 
+                    <div class="panel-body">
+                        <img src="{{detailsPic}}" height='45' width="45">
+                        <h5>{{detailsName}}</h5>
+                        <p class="time"> {{data.time}} </p>
+                        <p> {{data.message}} </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
+    <script> // highlighting the active when clicked
+    $(".nav li").on("click", function() {
+      $(".nav li").removeClass("active");
+      $(this).addClass("active");
+    });
+    </script>
+</body>
+</html>
